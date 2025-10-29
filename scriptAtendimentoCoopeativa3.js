@@ -83,6 +83,7 @@ const skillConfig = {
     29220991: "Poupanca",
     29220992: "Prevencao e Fraude",
     29220993: "Previdencia Privada",
+    35589848: "Portal de Serviços do CCS",
     29220994: "Recursos Banco",
     29220995: "Relatorios Antigos",
     29220996: "Repactuacao",
@@ -103,7 +104,6 @@ const skillConfig = {
     31507628: "2. SUPER: CAROLYNA M. S. PRUDES", 
     31507627: "2. SUPER: JOÃO MARTINS B. NETO", 
     31507626: "2. SUPER: LUCIANA SOARES LIMA",
-    35589848: "2. Portal de Serviços do CCS",
   },
 
   transferOptions: {
@@ -183,7 +183,7 @@ const skillConfig = {
       { value: "29221005", text: "Solicitacao Fundo" },
       { value: "29221006", text: "Transacao de Cartoes" },
       { value: "29221009", text: "Transferencia Internacional" },
-      { value: "35589848", text: "2. Portal de Serviços do CCS" },
+      { value: "35589848", text: "Portal de Serviços do CCS" },
       { value: "AC", text: "URA Atendimento à Cooperativas" },
     ],
   },
