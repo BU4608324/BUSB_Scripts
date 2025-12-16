@@ -128,20 +128,16 @@ function getTransferSkill(opTransf) {
   const skillConfig = {
     "SacContestacao": "25166580 - SAC Contestação",
     "RetencaoSipag": "23121572 - Retenção Sipag",
-    "ConsorcioRetencao": " - Retenção Consórcio",
+    "ConsorcioRetencao": "20868533 - Retenção Consórcio",
     "UraPuc": "URA PUC",
-    "UraCoopcerto": "URA COOPCERTO",
-    "Poupanca": "POUPANÇA",
-    "RetencaoSeguros": "RETENÇÃO SEGUROS",
-    "RetencaoCartao": "RETENÇÃO CARTÃO",
-    "UraCartoes": "URA CARTÕES",
-    "UraCartoesBlack": "URA CARTÕES BLACK",
+    "UraCoopcerto": "URA Coopcerto",
+    "RetencaoSeguros": "29221352 - Retenção Seguros",
+    "RetencaoCartao": "29269553 - Retenção Cartões",
+    "UraCartoes": "URA Cartões",
     "UraConsorcio": "URA Consórcio",
-    "UraCoopera": "URA COOPERA",
-    "UraCartoesCresol": "URA CARTÕES CRESOL",
-    "UraLojistaCabal": "URA LOJISTA CABAL",
-    "UraSipag1": "URA SIPAG 1.0",
-    "UraSipag2": "URA SIPAG 2.0"
+    "UraCoopera": "URA Coopera",
+    "UraLojistaCabal": "URA Lojista Cabal",
+    "UraSipag2": "URA Sipag"
   };
  
   return skillConfig[opTransf] || "";
