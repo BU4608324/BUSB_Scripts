@@ -82,8 +82,29 @@ window.onload = function () {
       case "23120886":
         skillFormatada = "23120886 - Sipag 2.0 Suporte Tecnico";
         break;
-      case "23121572":
+      case "RetencaoSipag":
         skillFormatada = "23121572 - Sipag 2.0 Retencao";
+        break;
+      case "23120880":
+        skillFormatada = "23120880 - Sipag 2.0 - App";
+        break;
+      case "23120881":
+        skillFormatada = "23120881 - Sipag 2.0 - Atendente";
+        break;
+      case "23120882":
+        skillFormatada = "23120882 - Sipag_2.0_Cadastro";
+        break;
+      case "23120884":
+        skillFormatada = "23120884 - Sipag 2.0 - Logistica";
+        break;
+      case "23120885":
+        skillFormatada = "23120885 - Sipag 2.0 - Relatorio";
+        break;
+      case "25166191":
+        skillFormatada = "25166191 - Sipag 2.0_Reativ_Cadastro";
+        break;
+      case "UraPuc":
+        skillFormatada = "URA PUC";
         break;
       default:
         skillFormatada = " ";
@@ -103,6 +124,14 @@ window.onload = function () {
     { value: "", text: "Lista de Transferência:" },
     { value: "23120883", text: "23120883 - Sipag 2.0 Financeiro" },
     { value: "23120886", text: "23120886 - Sipag 2.0 Suporte Tecnico" },
+    { value: "RetencaoSipag", text: "23121572 - Sipag 2.0 Retencao" },
+    { value: "23120880", text: "23120880 - Sipag 2.0 - App" },
+    { value: "23120881", text: "23120881 - Sipag 2.0 - Atendente" },
+    { value: "23120882", text: "23120882 - Sipag_2.0_Cadastro" },
+    { value: "23120884", text: "23120884 - Sipag 2.0 - Logistica" },
+    { value: "23120885", text: "23120885 - Sipag 2.0 - Relatorio" },
+    { value: "25166191", text: "25166191 - Sipag 2.0_Reativ_Cadastro" },
+    { value: "UraPuc", text: "URA PUC" },
   ];
 
   // Obter o valor do input SkillT
@@ -175,8 +204,22 @@ function getTransferSkill(opTransf) {
       return "23120883 - Sipag 2.0 Financeiro";
     case "23120886":
       return "23120886 - Sipag 2.0 Suporte Tecnico";
-    case "23121572":
+    case "RetencaoSipag":
       return "23121572 - Sipag 2.0 Retencao";
+    case "23120880":
+      return "23120880 - Sipag 2.0 - App";
+    case "23120881":
+      return "23120881 - Sipag 2.0 - Atendente";
+    case "23120882":
+      return "23120882 - Sipag_2.0_Cadastro";
+    case "23120884":
+      return "23120884 - Sipag 2.0 - Logistica";
+    case "23120885":
+      return "23120885 - Sipag 2.0 - Relatorio";
+    case "25166191":
+      return "25166191 - Sipag 2.0_Reativ_Cadastro";
+    case "UraPuc":
+      return "URA PUC";
     default:
       return " ";
   }
@@ -206,12 +249,21 @@ function showPopup() {
   }
 }
 
+// Modal
+  const modal = document.getElementById("recordingModal");
+  const overlay = document.getElementById("overlay");
+  if (modal && overlay) {
+    modal.style.display = "block";
+    overlay.style.display = "block";
+  } else {
+    console.warn("Modal ou overlay não encontrados.");
+  }
 
-// Função para abrir a modal de gravação
-function openRecordingModal() {
-  document.getElementById("recordingModal").style.display = "block";
-  document.getElementById("overlay").style.display = "block";
-}
+  // Botão confirmação
+  const openBtn = document.getElementById("openConfirmation");
+  if (openBtn && typeof confirmTransfer === 'function') {
+    openBtn.addEventListener("click", confirmTransfer);
+  }
 
 // Função para confirmar fechamento da gravação
 function confirmRecording() {
