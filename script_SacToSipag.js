@@ -218,3 +218,12 @@ window.onload = function () {
   populateTransferList();
   setupTransferButton();
 };
+
+// BOTÃO PESQUISA E FINALIZAR LIGAÇÃO
+document.getElementById("btnPesquisa").addEventListener("click", function () {
+  this.value = "pesquisa";
+});
+ 
+document.getElementById('MotivoDesc').addEventListener('change', function () {
+  console.log("Motivo selecionado:", this.value);
+});
