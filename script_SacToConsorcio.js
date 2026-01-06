@@ -1,284 +1,233 @@
-// Função de copiar texto ao clicar no botão "Copiar"
+/*************************************************
+ * UTILIDADES DE CÓPIA
+ *************************************************/
+
+// Copiar texto via botão
 function copyToClipboard(elementId) {
-  var copyText = document.getElementById(elementId);
-  if (copyText) {
-    copyText.select();
-    document.execCommand("copy");
-    console.log("Copiado pelo botão: " + copyText.value);
-  }
-}
+  const el = document.getElementById(elementId);
+  if (!el) return;
 
-// Função de copiar texto ao clicar no campo
-function copyOnClick(event) {
-  var copyText = event.target;
-  copyText.select();
+  el.select();
   document.execCommand("copy");
-  console.log("Copiado com clique: " + copyText.value);
+  console.log("Copiado:", el.value);
 }
 
-const inputs = document.querySelectorAll('input[type="text"]');
+// Copiar ao clicar no input
+function copyOnClick(event) {
+  const el = event.target;
+  el.select();
+  document.execCommand("copy");
+}
 
-inputs.forEach(input => {
-  input.addEventListener('click', copyOnClick);
+// Copiar ao focar
+function copyOnFocus(elementId) {
+  const el = document.getElementById(elementId);
+  if (!el) return;
+
+  el.select();
+  document.execCommand("copy");
+}
+
+// Aplica evento de clique a todos os inputs texto
+document.addEventListener("DOMContentLoaded", () => {
+  document
+    .querySelectorAll('input[type="text"]')
+    .forEach(input => input.addEventListener("click", copyOnClick));
 });
 
-// Função de copiar texto ao focar no campo
-function copyOnFocus(elementId) {
-  var copyText = document.getElementById(elementId);
-  if (copyText) {
-    copyText.select();
-    document.execCommand("copy");
-    console.log("Copiado com foco: " + copyText.value);
-  }
-}
+/*************************************************
+ * NAVEGAÇÃO URA
+ *************************************************/
 
-// Função de preencher o dropdown de "Navegação"
 function populateDropdown() {
-  var caminhoElement = document.getElementById('Caminho');
-  if (caminhoElement) {
-    var caminho = caminhoElement.value;
-    var caminhoArray = caminho.split(',');
-    var select = document.getElementById('navegacaoURA');
+  const caminhoElement = document.getElementById("Caminho");
+  const select = document.getElementById("navegacaoURA");
 
-    select.innerHTML = '';
+  if (!caminhoElement || !select) return;
 
-    var defaultOption = document.createElement('option');
-    defaultOption.value = "";
-    defaultOption.text = "Navegação:";
-    defaultOption.selected = true;
-    defaultOption.disabled = true;
-    defaultOption.style.color = "#000000";
-    select.appendChild(defaultOption);
+  const caminho = caminhoElement.value?.trim();
 
-    caminhoArray.forEach(function (item) {
-      var option = document.createElement('option');
-      option.value = item.trim();
-      option.text = item.trim();
-      option.disabled = true;
-      option.style.color = "#000000";
-      select.appendChild(option);
-    });
-  }
-}
-
-window.onload = function () {
-  // Abrir modal de gravação
-  openRecordingModal();
-
-  // Preencher dropdown
-  populateDropdown();
-
-  // Exibir skill de entrada
-  const skillOrigemElement = document.getElementById('SkillOrigem');
-  let skillFormatada = "";
-
-  if (skillOrigemElement) {
-    let skillOrigem = skillOrigemElement.value;
-
-    switch (skillOrigem) {
-        case "ConsorcioRetencao":
-            skillFormatada = "20868533 - Consorcio_Retencao";
-            break;
-        case "20868528":
-            skillFormatada = "20868528 - Consorcio_Baixa-DOC";
-            break;
-        case "20868525":
-            skillFormatada = "20868525 - Consorcio_Adesao";
-            break;
-        case "20868526":
-            skillFormatada = "20868526 - Consorcio_Assembleia";
-            break;
-        case "20868527":
-            skillFormatada = "20868527 - Consorcio_Assuntos-Gerais";
-            break;
-        case "20868529":
-            skillFormatada = "20868529 - Consorcio_Cadastro";
-            break;
-        case "20868530":
-            skillFormatada = "20868530 - Consorcio_Contemplacao";
-            break;
-        case "20868531":
-            skillFormatada = "20868531 - Consorcio_Financeiro";
-            break;
-        case "20868535":
-            skillFormatada = "20868535 - Consorcio_TrocaTitularidade";
-            break;
-        case "25166234":
-            skillFormatada = "25166234 - Transf_Consorcio_Funchal";
-            break;
-        case "UraConsorcio":  
-            skillFormatada = "URA CONSORCIO";
-            break;  
-        case "UraPuc":
-            skillFormatada = "URA PUC";
-            break;
-        default:
-            skillFormatada = " ";
-            break;
-    }
-
-    const origemElement = document.getElementById('Origem');
-    if (origemElement) {
-      origemElement.value = skillFormatada;
-    } else {
-      console.warn("Elemento com ID 'Origem' não encontrado.");
-    }
+  // Estado seguro: nunca deixa vazio
+  if (!caminho) {
+    select.innerHTML = '<option value="">Sem navegação</option>';
+    return;
   }
 
-  // Opções para o select
-  const allOptions = [
-    { value: "", text: "Lista de Transferência:" },
-    { value: "ConsorcioRetencao", text: "20868533 - Consorcio_Retencao" },
-    { value: "20868528", text: "20868528 - Consorcio_Baixa-DOC" },
-    { value: "20868525", text: "20868525 - Consorcio_Adesao" },
-    { value: "20868526", text: "20868526 - Consorcio_Assembleia" },
-    { value: "20868527", text: "20868527 - Consorcio_Assuntos-Gerais" },
-    { value: "20868529", text: "20868529 - Consorcio_Cadastro" },
-    { value: "20868530", text: "20868530 - Consorcio_Contemplacao" },
-    { value: "20868531", text: "20868531 - Consorcio_Financeiro" },
-    { value: "20868535", text: "20868535 - Consorcio_TrocaTitularidade" },
-    { value: "25166234", text: "25166234 - Transf_Consorcio_Funchal" },
-    { value: "UraConsorcio", text: "URA CONSORCIO" },
-    { value: "UraPuc", text: "URA PUC" },
-  ];
+  const itens = caminho
+    .split(",")
+    .map(i => i.trim())
+    .filter(i => i.length > 0);
 
-  // Obter o valor do input SkillT
-  const skillValue = document.getElementById("SkillT").value;
+  if (itens.length === 0) {
+    select.innerHTML = '<option value="">Sem navegação</option>';
+    return;
+  }
 
-  // Obter o select
-  const select = document.getElementById("ListaTransf");
-
-  // Limpar o select para evitar duplicação
   select.innerHTML = "";
 
-  // Filtrar as opções para remover a que está em skillValue
-  const optionsToShow = allOptions.filter(option => option.value !== skillValue);
+  const defaultOpt = document.createElement("option");
+  defaultOpt.value = "";
+  defaultOpt.textContent = "Navegação:";
+  defaultOpt.disabled = true;
+  defaultOpt.selected = true;
+  select.appendChild(defaultOpt);
 
-  // Adicionar as opções ao select
-  optionsToShow.forEach(option => {
+  itens.forEach(item => {
     const opt = document.createElement("option");
-    opt.value = option.value;
-    opt.textContent = option.text;
+    opt.value = item;
+    opt.textContent = item;
+    opt.disabled = true; // apenas informativo
     select.appendChild(opt);
   });
+}
 
-  // Não exibir mesma skill
-  const skillValueElement = document.getElementById('SkillT');
-  const options = select.querySelectorAll('option');
+/*************************************************
+ * LISTA DE TRANSFERÊNCIA
+ *************************************************/
 
-  if (skillValueElement) {
-    const skillValue = skillValueElement.value;
-    options.forEach(option => {
-      if (option.value === skillValue) {
-        option.style.display = 'none';
-      } else {
-        option.style.display = '';
-      }
+function populateTransferList() {
+  const select = document.getElementById("ListaTransf");
+  const skillInput = document.getElementById("SkillT");
+
+  if (!select || !skillInput) return;
+
+  const skillAtual = skillInput.value;
+
+const allOptions = [
+  { value: "20868533", text: "20868533 - Consorcio_Retencao" },
+  { value: "20868528", text: "20868528 - Consorcio_Baixa-DOC" },
+  { value: "20868525", text: "20868525 - Consorcio_Adesao" },
+  { value: "20868526", text: "20868526 - Consorcio_Assembleia" },
+  { value: "20868527", text: "20868527 - Consorcio_Assuntos-Gerais" },
+  { value: "20868529", text: "20868529 - Consorcio_Cadastro" },
+  { value: "20868530", text: "20868530 - Consorcio_Contemplacao" },
+  { value: "20868531", text: "20868531 - Consorcio_Financeiro" },
+  { value: "20868535", text: "20868535 - Consorcio_TrocaTitularidade" },
+  { value: "25166234", text: "25166234 - Transf_Consorcio_Funchal" },
+  { value: "UraConsorcio", text: "URA CONSORCIO" },
+  { value: "UraPuc", text: "URA PUC" }
+];
+
+  select.innerHTML = "";
+
+  // Default obrigatório
+  const defaultOpt = document.createElement("option");
+  defaultOpt.value = "";
+  defaultOpt.textContent = "Selecione uma transferência";
+  defaultOpt.disabled = true;
+  defaultOpt.selected = true;
+  select.appendChild(defaultOpt);
+
+  allOptions
+    .filter(opt => opt.value !== skillAtual)
+    .forEach(opt => {
+      const option = document.createElement("option");
+      option.value = opt.value;
+      option.textContent = opt.text;
+      select.appendChild(option);
     });
-  }
+}
 
-  // Habilitar/desabilitar botão baseado na seleção
-  const selectElement = document.getElementById('ListaTransf');
-  const button = document.getElementById('openConfirmation');
+/*************************************************
+ * BOTÃO DE TRANSFERÊNCIA
+ *************************************************/
 
-  // Iniciar com o botão desabilitado
+function setupTransferButton() {
+  const select = document.getElementById("ListaTransf");
+  const button = document.getElementById("openConfirmation");
+
+  if (!select || !button) return;
+
   button.disabled = true;
   button.style.cursor = "not-allowed";
 
-  // Adicionar evento para habilitar/desabilitar o botão quando houver mudança no select
-  selectElement.addEventListener('change', function() {
-    if (selectElement.value !== "") {
-      button.disabled = false;
-      button.style.cursor = "pointer";
-    } else {
-      button.disabled = true;
-      button.style.cursor = "not-allowed";
-    }
+  select.addEventListener("change", () => {
+    const habilitar = select.value !== "";
+    button.disabled = !habilitar;
+    button.style.cursor = habilitar ? "pointer" : "not-allowed";
   });
 
-  // Event listener para o botão de transferência
-  document.getElementById('openConfirmation').addEventListener('click', showPopup);
-
-  // Botão "Pesquisa"
-  document.getElementById("btnPesquisa").addEventListener("click", function () {
-    this.value = "pesquisa";
-  });
-};
-
-// Função para obter skill formatada
-function getTransferSkill(opTransf) {
-  switch (opTransf) {
-    case "ConsorcioRetencao":
-      return "20868533 - Consorcio_Retencao";
-    case "20868528":
-      return "20868528 - Consorcio_Baixa-DOC";
-    case "20868525":
-      return "20868525 - Consorcio_Adesao";
-    case "20868526":
-      return "20868526 - Consorcio_Assembleia";
-    case "20868527":
-      return "20868527 - Consorcio_Assuntos-Gerais";
-    case "20868529":
-      return "20868529 - Consorcio_Cadastro";
-    case "20868530":
-      return "20868530 - Consorcio_Contemplacao";
-    case "20868531":
-      return "20868531 - Consorcio_Financeiro";
-    case "20868535":
-      return "20868535 - Consorcio_TrocaTitularidade";
-    case "25166234":
-      return "25166234 - Transf_Consorcio_Funchal";
-    case "UraConsorcio":
-      return "URA CONSORCIO";
-    case "UraPuc":
-      return "URA PUC";
-    default:
-      return " ";
-  }
+  button.addEventListener("click", showPopup);
 }
 
-// Função para confirmar transferência
+/*************************************************
+ * TRANSFERÊNCIA
+ *************************************************/
+
+function getTransferSkill(value) {
+  const map = {
+    "20868533": "20868533 - Consorcio_Retencao",
+    "20868528": "20868528 - Consorcio_Baixa-DOC",
+    "20868525": "20868525 - Consorcio_Adesao",  
+    "20868526": "20868526 - Consorcio_Assembleia",
+    "20868527": "20868527 - Consorcio_Assuntos-Gerais",
+    "20868529": "20868529 - Consorcio_Cadastro",
+    "20868530": "20868530 - Consorcio_Contemplacao",
+    "20868531": "20868531 - Consorcio_Financeiro",
+    "20868535": "20868535 - Consorcio_TrocaTitularidade",
+    "25166234": "25166234 - Transf_Consorcio_Funchal",
+    "UraConsorcio": "URA CONSORCIO",
+    "UraPuc": "URA PUC"
+  };
+  return map[value] || "";
+}
+
 function confirmTransfer() {
-  let opTransf = document.getElementById('ListaTransf').value;
-  console.log('Transferência confirmada para: ' + opTransf);
-  document.getElementById('openConfirmation').value = "transf";
+  document.getElementById("openConfirmation").value = "transf";
 }
 
-// Popup Confirmação Transferência
 function showPopup() {
-  let opTransf = document.getElementById('ListaTransf').value;
-  console.log(opTransf);
+  const select = document.getElementById("ListaTransf");
+  const value = select.value;
 
-  if (opTransf != "") {
-    let transfSkill = getTransferSkill(opTransf);
-
-    const result = confirm("Realmente deseja transferir para " + transfSkill + "?");
-    if (result) {
-      confirmTransfer();
-    }
-  } else {
+  if (!value) {
     alert("Nenhuma opção selecionada.");
+    return;
+  }
+
+  const texto = getTransferSkill(value);
+  const confirmar = confirm(`Realmente deseja transferir para ${texto}?`);
+
+  if (confirmar) {
+    confirmTransfer();
   }
 }
 
-// Modal
+/*************************************************
+ * MODAL DE GRAVAÇÃO
+ *************************************************/
+
+function openRecordingModal() {
   const modal = document.getElementById("recordingModal");
   const overlay = document.getElementById("overlay");
-  if (modal && overlay) {
-    modal.style.display = "block";
-    overlay.style.display = "block";
-  } else {
-    console.warn("Modal ou overlay não encontrados.");
-  }
 
-  // Botão confirmação
-  const openBtn = document.getElementById("openConfirmation");
-  if (openBtn && typeof confirmTransfer === 'function') {
-    openBtn.addEventListener("click", confirmTransfer);
-  }
+  if (!modal || !overlay) return;
 
-// Função para confirmar fechamento da gravação
+  modal.style.display = "block";
+  overlay.style.display = "block";
+}
+
 function confirmRecording() {
   document.getElementById("recordingModal").style.display = "none";
   document.getElementById("overlay").style.display = "none";
 }
+
+/*************************************************
+ * INICIALIZAÇÃO
+ *************************************************/
+
+window.onload = function () {
+  openRecordingModal();
+  populateDropdown();
+  populateTransferList();
+  setupTransferButton();
+};
+
+// BOTÃO PESQUISA E FINALIZAR LIGAÇÃO
+document.getElementById("btnPesquisa").addEventListener("click", function () {
+  this.value = "pesquisa";
+});
+ 
+document.getElementById('MotivoDesc').addEventListener('change', function () {
+  console.log("Motivo selecionado:", this.value);
+});
