@@ -96,7 +96,7 @@ function populateTransferList() {
   const allOptions = [
     { value: "23120883", text: "23120883 - Sipag 2.0 Financeiro" },
     { value: "23120886", text: "23120886 - Sipag 2.0 Suporte Tecnico" },
-    { value: "RetencaoSipag", text: "23121572 - Sipag 2.0 Retencao" },
+    { value: "23121572", text: "23121572 - Sipag 2.0 Retencao" },
     { value: "23120880", text: "23120880 - Sipag 2.0 - App" },
     { value: "23120881", text: "23120881 - Sipag 2.0 - Atendente" },
     { value: "23120882", text: "23120882 - Sipag_2.0_Cadastro" },
@@ -156,7 +156,7 @@ function getTransferSkill(value) {
   const map = {
     "23120883": "23120883 - Sipag 2.0 Financeiro",
     "23120886": "23120886 - Sipag 2.0 Suporte Tecnico",
-    "RetencaoSipag": "23121572 - Sipag 2.0 Retencao",
+    "23121572": "23121572 - Sipag 2.0 Retencao",
     "23120880": "23120880 - Sipag 2.0 - App",
     "23120881": "23120881 - Sipag 2.0 - Atendente",
     "23120882": "23120882 - Sipag_2.0_Cadastro",
