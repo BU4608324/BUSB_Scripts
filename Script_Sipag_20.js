@@ -41,7 +41,14 @@ const skillConfig = {
     "23120880": "Sipag 2.0 App",
     "23120881": "Sipag 2.0 Atendente",
     "23120882": "Sipag 2.0 Cadastro",
-    "23120883": "Sipag 2.0 Financeiro"
+    "23120883": "Sipag 2.0 Financeiro",
+    "23120884": "Sipag 2.0 Logistica",
+    "23120885": "Sipag 2.0 Relatorio",
+    "23120886": "Sipag 2.0 Suporte Tecnico",
+    "23121572": "Sipag 2.0 Retencao",
+    "25166191": "Sipag 2.0 Reativacao de Cadastro",
+    "25166192": "Sipag 2.0 Habilitar Servico Antecipacao",
+    "23120887": "Sipag 2.0 Erro Validação URA",
   },
   
   transferOptions: {
@@ -50,6 +57,12 @@ const skillConfig = {
       {value: "23120881", text: "Sipag 2.0 Atendente"},
       {value: "23120882", text: "Sipag 2.0 Cadastro"},
       {value: "23120883", text: "Sipag 2.0 Financeiro"},
+      {value: "23120884", text: "Sipag 2.0 Logistica"},
+      {value: "23120885", text: "Sipag 2.0 Relatorio"},
+      {value: "23120886", text: "Sipag 2.0 Suporte Tecnico"},
+      {value: "23121572", text: "Sipag 2.0 Retencao"},
+      {value: "25166191", text: "Sipag 2.0 Reativacao de Cadastro"},
+      {value: "25166192", text: "Sipag 2.0 Habilitar Servico Antecipacao"},
       {value: "PUC", text: "URA PUC"}
     ],
     "25166399": [
