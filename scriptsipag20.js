@@ -210,9 +210,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const selectElement = document.getElementById('ListaTransf');
   const button = document.getElementById('openConfirmation');
 
-  // Iniciar com o botão desabilitado
-  button.disabled = true;
-  button.style.cursor = "not-allowed";
 
   // Adicionar evento para habilitar/desabilitar o botão quando houver mudança no select
   selectElement.addEventListener('change', function() {
