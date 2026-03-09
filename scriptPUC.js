@@ -302,9 +302,11 @@ function showPopup() {
       case "20868527":
         transfSkill = "20868527 - Consorcio Assuntos Gerais";
         break;
+        default:
+        transfSkill = " ";
+        break;
     }
-
-  
+    
     const result = confirm("Realmente deseja transferir para " + transfSkill + "?");
     if (result) {
       executarFuncao();
