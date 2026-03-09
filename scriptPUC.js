@@ -304,9 +304,7 @@ function showPopup() {
         break;
     }
 
-      const skillName = skillConfig.skills[opTransf] || 
-                   (opTransf === 'CARTOES' ? 'URA CARTOES' : 'Skill Desconhecida');
-    
+  
     const result = confirm("Realmente deseja transferir para " + transfSkill + "?");
     if (result) {
       executarFuncao();
