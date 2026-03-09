@@ -389,9 +389,10 @@ const allOptions = [
 // Opções para "1. Associação_Digital" (apenas URA PUC, CONSORCIOS e CARTOES)
 const contemplationOptions = [
    { value: " ", text: "Lista de Transferência:" },
+   {value: "PUC", text: "URA PUC"},
+   {value: "SIPAG", text: "URA SIPAG"},
    {value: "CARTOES", text: "URA CARTOES"},
-   {value: "CONSORCIOS", text: "URA CONSORCIOS"},
-   { value: "PUC", text: "URA PUC" }
+   { value: "CONSORCIOS", text: "URA CONSORCIOS" }
   ];
 
 // Obter o valor do input SkillT
