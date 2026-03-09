@@ -386,14 +386,13 @@ const allOptions = [
   { value: "20868527", text: "20868527 - Consorcio Assuntos Gerais" }
 ];
 
-// Opções para "Consórcio Contemplação" (apenas Transferência e URA PUC)
-// const contemplationOptions = [
-//   { value: " ", text: "Lista de Transferência:" },
-//   { value: "20868534", text: "20868534 - Consórcio Transferência" },
-//   { value: "20868532", text: "20868532 - Consórcio Funchal" },
-//   { value: "20868533", text: "20868533 - Consórcio Retencao" },
-//   { value: "PUC", text: "URA PUC" }
-// ];
+// Opções para "1. Associação_Digital" (apenas URA PUC, CONSORCIOS e CARTOES)
+const contemplationOptions = [
+   { value: " ", text: "Lista de Transferência:" },
+   {value: "CARTOES", text: "URA CARTOES"},
+   {value: "CONSORCIOS", text: "URA CONSORCIOS"},
+   { value: "PUC", text: "URA PUC" }
+  ];
 
 // Obter o valor do input SkillT
 const skillValue = document.getElementById("SkillT").value;
@@ -402,7 +401,7 @@ const skillValue = document.getElementById("SkillT").value;
 const select = document.getElementById("ListaTransf");
 
 // Escolher as opções com base na skill
-const optionsToShow = skillValue === "20868530"
+const optionsToShow = skillValue === "25166177"
   ? contemplationOptions
   : allOptions.filter(option => option.value !== "20868534" && option.value !== skillValue);
 
