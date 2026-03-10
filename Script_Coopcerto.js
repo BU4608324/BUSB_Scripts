@@ -195,15 +195,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // Opções para o select
-   
-if (skillOrigem == 25166188) {
-const allOptions = [
-  { value: "", text: "Lista de Transferência:" },
-  { value: "25166189", text: "25166189 - Coopcerto Retencao" },
-  { value: "COOPCERTO", text: "URA COOPCERTO" }
-];
-}
-else {
 const allOptions = [
   { value: "", text: "Lista de Transferência:" },
   { value: "25166189", text: "25166189 - Coopcerto Retencao" },
@@ -213,7 +204,16 @@ const allOptions = [
   { value: "25166306", text: "25166306 - TER_Coopcerto_Portador_Emergencial" },
   { value: "PUC", text: "URA PUC" }
 ];
-}
+
+    switch (skillOrigem) {
+      case "25166188":
+  const allOptions = [
+  { value: "", text: "Lista de Transferência:" },
+  { value: "25166189", text: "25166189 - Coopcerto Retencao" },
+  { value: "COOPCERTO", text: "URA COOPCERTO" }
+];
+        break;
+        
 // Obter o valor do input SkillT
 const skillValue = document.getElementById("SkillT").value;
 
