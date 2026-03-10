@@ -195,32 +195,8 @@ const allOptions = [
   { value: "25166188", text: "25166188 - Coopcerto Empresa" },
   { value: "25166187", text: "25166187 - Coopcerto Cotacao" },
   { value: "25166175", text: "25166175 - TER Coopcerto Portador" },
-  { value: "PUC", text: "URA PUC" },
+  { value: "PUC", text: "URA PUC" }
 ];
-
-const allOptions2 = [
-  { value: "", text: "Lista de Transferência:" },
-  { value: "25166189", text: "25166189 - Coopcerto Retencao" },
-  { value: "UraCoopcerto", text: "URA COOPCERTO" },
-];
-
-const allOptions3 = [
-  { value: "", text: "Lista de Transferência:" },
-  { value: "UraCoopcerto", text: "URA COOPCERTO" },
-];
-
-// Filtrar as opções para transferencias
- 
-let filteredOptions;
-if (skillValue == 25166188) {
-  filteredOptions = allOptions2;
-} 
-if (skillValue == 25166189) {
-  filteredOptions = allOptions3;
-}
-else {
-  filteredOptions = allOptions;
-}
 
 // Obter o valor do input SkillT
 const skillValue = document.getElementById("SkillT").value;
@@ -241,7 +217,3 @@ optionsToShow.forEach(option => {
   opt.textContent = option.text;
   select.appendChild(opt);
 });
-
-
-
-
