@@ -212,10 +212,10 @@ const allOptions3 = [
 // Filtrar as opções para transferencias
  
 let filteredOptions;
-if (skillValue == 25166187 || skillValue == 25166188) {
+if (skillValue == 25166188) {
   filteredOptions = allOptions2;
 } 
-if (skillValue == 25166175 || skillValue == 25166306 || skillValue == 25166189) {
+if (skillValue == 25166189) {
   filteredOptions = allOptions3;
 }
 else {
@@ -241,5 +241,6 @@ optionsToShow.forEach(option => {
   opt.textContent = option.text;
   select.appendChild(opt);
 });
+
 
 
