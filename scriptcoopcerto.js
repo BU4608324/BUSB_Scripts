@@ -195,7 +195,7 @@ const allOptions = [
   { value: "25166188", text: "25166188 - Coopcerto Empresa" },
   { value: "25166187", text: "25166187 - Coopcerto Cotacao" },
   { value: "25166175", text: "25166175 - TER Coopcerto Portador" },
-  { value: "PUC", text: "URA PUC" }
+  { value: "PUC", text: "URA PUC" },
 ];
 
 const allOptions2 = [
@@ -241,6 +241,7 @@ optionsToShow.forEach(option => {
   opt.textContent = option.text;
   select.appendChild(opt);
 });
+
 
 
 
