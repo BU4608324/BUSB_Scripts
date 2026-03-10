@@ -218,13 +218,22 @@ const allOptions2 = [
   { value: "RetencaoSeguros", text: "Retenção Seguros" },
   { value: "RetencaoSipag", text: "Retenção Sipag" },
 ];
+
+const allOptions3 = [
+  { value: "", text: "Lista de Transferência:" },
+  { value: "UraPuc", text: "URA PUC" },
+];
  
 // Filtrar as opções para garantir que a opção "SAC_CONTESTAÇÃO" seja exibida apenas se a skill for 25166580
  
 let filteredOptions;
 if (skillValue == 25166183) {
   filteredOptions = allOptions;
-} else {
+} 
+if (skillValue == 25166580) {
+  filteredOptions = allOptions3;
+}
+else {
   filteredOptions = allOptions2;
 }
  
