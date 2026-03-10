@@ -205,7 +205,6 @@ const allOptions = [
   { value: "PUC", text: "URA PUC" }
 ];
 
-      
 // Obter o valor do input SkillT
 const skillValue = document.getElementById("SkillT").value;
 
