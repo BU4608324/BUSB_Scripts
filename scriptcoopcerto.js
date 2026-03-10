@@ -101,6 +101,9 @@ window.onload = function () {
       case "25166175":
         skillFormatada = "25166175 - TER Coopcerto Portador";
         break;
+      case "25166306":
+        skillFormatada = "25166306 - TER Coopcerto Portador Emergencial";
+        break;
       default:
         skillFormatada = " ";
         break;
@@ -135,6 +138,9 @@ function showPopup() {
         break;
       case "25166175":
         transfSkill = "25166175 - TER Coopcerto Portador";
+        break;
+      case "25166306":
+        transfSkill = "25166306 - TER Coopcerto Portador Emergencial";
         break;
       case "PUC":
         transfSkill = "URA PUC";
@@ -191,10 +197,11 @@ document.addEventListener('DOMContentLoaded', function() {
 // Opções para o select
 const allOptions = [
   { value: "", text: "Lista de Transferência:" },
-  { value: "25166189", text: "25166189 - Coopcerto Retencao" },
-  { value: "25166188", text: "25166188 - Coopcerto Empresa" },
-  { value: "25166187", text: "25166187 - Coopcerto Cotacao" },
-  { value: "25166175", text: "25166175 - TER Coopcerto Portador" },
+//  { value: "25166189", text: "25166189 - Coopcerto Retencao" },
+//  { value: "25166188", text: "25166188 - Coopcerto Empresa" },
+//  { value: "25166187", text: "25166187 - Coopcerto Cotacao" },
+//  { value: "25166175", text: "25166175 - TER Coopcerto Portador" },
+//  { value: "25166306", text: "25166306 - TER_Coopcerto_Portador_Emergencial" },
   { value: "PUC", text: "URA PUC" }
 ];
 
