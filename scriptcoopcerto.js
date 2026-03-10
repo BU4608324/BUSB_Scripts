@@ -197,11 +197,11 @@ document.addEventListener('DOMContentLoaded', function() {
 // Opções para o select
 const allOptions = [
   { value: "", text: "Lista de Transferência:" },
-//  { value: "25166189", text: "25166189 - Coopcerto Retencao" },
-//  { value: "25166188", text: "25166188 - Coopcerto Empresa" },
-//  { value: "25166187", text: "25166187 - Coopcerto Cotacao" },
-//  { value: "25166175", text: "25166175 - TER Coopcerto Portador" },
-//  { value: "25166306", text: "25166306 - TER_Coopcerto_Portador_Emergencial" },
+  { value: "25166189", text: "25166189 - Coopcerto Retencao" },
+  { value: "25166188", text: "25166188 - Coopcerto Empresa" },
+  { value: "25166187", text: "25166187 - Coopcerto Cotacao" },
+  { value: "25166175", text: "25166175 - TER Coopcerto Portador" },
+  { value: "25166306", text: "25166306 - TER_Coopcerto_Portador_Emergencial" },
   { value: "PUC", text: "URA PUC" }
 ];
 
@@ -224,3 +224,4 @@ optionsToShow.forEach(option => {
   opt.textContent = option.text;
   select.appendChild(opt);
 });
+
