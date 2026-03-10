@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Opções para o select
    
-if (skillValue == 25166188) {
+if (skillOrigem == 25166188) {
 const allOptions = [
   { value: "", text: "Lista de Transferência:" },
   { value: "25166189", text: "25166189 - Coopcerto Retencao" },
