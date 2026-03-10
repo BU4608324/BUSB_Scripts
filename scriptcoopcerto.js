@@ -201,7 +201,7 @@ const allOptions = [
 const allOptions2 = [
   { value: "", text: "Lista de Transferência:" },
   { value: "25166189", text: "25166189 - Coopcerto Retencao" },
-  { value: "URA COOPCERTO", text: "URA COOPCERTO" },
+  { value: "UraCoopcerto", text: "URA COOPCERTO" },
 ];
 
 const allOptions3 = [
@@ -241,4 +241,5 @@ optionsToShow.forEach(option => {
   opt.textContent = option.text;
   select.appendChild(opt);
 });
+
 
