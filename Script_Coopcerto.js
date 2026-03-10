@@ -205,13 +205,7 @@ const allOptions = [
   { value: "PUC", text: "URA PUC" }
 ];
 
-  if (skillOrigem == "25166188") {
-  const allOptions = [
-  { value: "", text: "Lista de Transferência:" },
-  { value: "25166189", text: "25166189 - Coopcerto Retencao" },
-  { value: "COOPCERTO", text: "URA COOPCERTO" }
-];
-        
+      
 // Obter o valor do input SkillT
 const skillValue = document.getElementById("SkillT").value;
 
