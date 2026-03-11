@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Opções para o select
 const allOptions = [
-//  { value: "", text: "Lista de Transferência:" },
+  { value: "", text: "Lista de Transferência:" },
 //  { value: "25166189", text: "25166189 - Coopcerto Retencao" },
 //  { value: "25166188", text: "25166188 - Coopcerto Empresa" },
 //  { value: "25166187", text: "25166187 - Coopcerto Cotacao" },
