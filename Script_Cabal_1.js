@@ -206,13 +206,13 @@ document.addEventListener('DOMContentLoaded', function() {
 // Opções para o select
 const allOptions = [
   { value: "", text: "Lista de Transferência:" },
-  { value: "20868796", text: "20868796 - Adq Cabal Cadastro" },
-  { value: "20868797", text: "20868797 - Adq Cabal Atendente" },
-  { value: "20868798", text: "20868798 - Adq Cabal Credenciamento" },
-  { value: "20868799", text: "20868799 - Adq Cabal Portal" },
-  { value: "20868801", text: "20868801 - Adq Cabal Financeiro" },
-  { value: "20868802", text: "20868802 - Adq Cabal Retencao" },
-  { value: "20868803", text: "20868803 - Adq Cabal Suporte Tecnico" },
+//  { value: "20868796", text: "20868796 - Adq Cabal Cadastro" },
+//  { value: "20868797", text: "20868797 - Adq Cabal Atendente" },
+//  { value: "20868798", text: "20868798 - Adq Cabal Credenciamento" },
+//  { value: "20868799", text: "20868799 - Adq Cabal Portal" },
+//  { value: "20868801", text: "20868801 - Adq Cabal Financeiro" },
+//  { value: "20868802", text: "20868802 - Adq Cabal Retencao" },
+  { value: "LOGISTA_CABAL", text: "URA LOJISTA CABAL" },
   { value: "PUC", text: "URA PUC" }
 ];
 
