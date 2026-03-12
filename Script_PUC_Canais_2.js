@@ -44,9 +44,9 @@ const skillConfig = {
   transferOptions: {
     default: [
         {value: "PUC", text: "URA PUC"},
-        {value: "SIPAG", text: "URA SIPAG"}
-        {value: "CARTOES", text: "URA CARTOES"}
-        {value: "CONSORCIOS", text: "URA CONSORCIOS"}  
+        {value: "SIPAG", text: "URA SIPAG"},
+        {value: "CARTOES", text: "URA CARTOES"},
+        {value: "CONSORCIOS", text: "URA CONSORCIOS"}
     ],
     "25166399": [
       {value: "PUC", text: "URA PUC"}
