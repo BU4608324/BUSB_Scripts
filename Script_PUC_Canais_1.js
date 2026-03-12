@@ -45,9 +45,9 @@ const skillConfig = {
     default: [
         {value: "35629618", text: "35629618 - HOME_BROKER_CONTINGENCIA"},
         {value: "PUC", text: "URA PUC"},
-        {value: "SIPAG", text: "URA SIPAG"}
-        {value: "CARTOES", text: "URA CARTOES"}
-        {value: "CONSORCIOS", text: "URA CONSORCIOS"}  
+        {value: "SIPAG", text: "URA SIPAG"},
+        { value: "CARTOES", text: "URA CARTOES" },
+        { value: "CONSORCIOS", text: "URA CONSORCIOS" }  
     ],
     "25166399": [
       {value: "PUC", text: "URA PUC"}
