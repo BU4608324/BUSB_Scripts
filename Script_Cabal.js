@@ -114,7 +114,7 @@ function confirmTransfer() {
   const skillName = skillConfig.skills[opTransf] || 
                    (opTransf === 'PUC' ? 'URA PUC' : 'URA COOPERA');
   
-  if (confirm(`Realmente deseja transferir para ${skillName}?`)) {
+  if (confirm(`Realmente deseja transferir?`)) {
     document.getElementById('openConfirmation').value = "transf";
     console.log('Transferência confirmada para:', skillName);
   }
