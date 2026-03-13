@@ -43,11 +43,13 @@ const skillConfig = {
   
   transferOptions: {
     default: [
-        {value: "35629618", text: "35629618 - HOME_BROKER_CONTINGENCIA"},
+        {value: "23120881", text: "23120881 - 1.Sipag 2.0 - Atendente"},
+        {value: "23120886", text: "23120886 - 1.Sipag 2.0 - SupTecnico"},
+        {value: "23121571", text: "23121571 - 1.Sipag 1.0 - Retencao"},
         {value: "PUC", text: "URA PUC"},
         {value: "SIPAG", text: "URA SIPAG"},
-        { value: "CARTOES", text: "URA CARTOES" },
-        { value: "CONSORCIOS", text: "URA CONSORCIOS" }  
+        {value: "FISERH", text: "URA FISERH"},
+        {value: "COOPERATIVAS", text: "URA COOPERATIVAS"}  
     ],
     "25166399": [
       {value: "PUC", text: "URA PUC"}
