@@ -64,7 +64,7 @@ const skillConfig = {
       {value: "20868531", text: "Consórcio Financeiro"},
       {value: "20868532", text: "Consórcio Funchal"},
       {value: "20868533", text: "Consórcio Retenção"},
-      {value: "20868534", text: "Consórcio Transferência"},
+//      {value: "20868534", text: "Consórcio Transferência"},
       {value: "20868535", text: "Consórcio Troca Titularidade"},
       {value: "25166400", text: "Consórcio Troca de Bem"},
       {value: "25166399", text: "Consórcio Recebimento de Crédito"},
@@ -75,7 +75,8 @@ const skillConfig = {
       {value: "PUC", text: "URA PUC"}
     ],
     "20868530": [
-      {value: "20868534", text: "Consórcio Transferência"},
+ //     {value: "20868534", text: "Consórcio Transferência"},
+      {value: "20868533", text: "Consórcio Retenção"},
       {value: "20868532", text: "Consórcio Funchal"},
       {value: "PUC", text: "URA PUC"}
     ]
