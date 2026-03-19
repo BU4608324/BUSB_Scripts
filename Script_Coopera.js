@@ -43,7 +43,7 @@ const skillConfig = {
   
   transferOptions: {
     default: [
-      {value: "25166174", text: "25166174 - TER Coopera"},
+ //     {value: "25166174", text: "25166174 - TER Coopera"},
       {value: "PUC", text: "URA PUC"},
       {value: "COOPERA", text: "URA COOPERA"}
     ],
