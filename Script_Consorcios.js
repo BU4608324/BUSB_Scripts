@@ -68,8 +68,9 @@ const skillConfig = {
       {value: "20868535", text: "Consórcio Troca Titularidade"},
       {value: "25166400", text: "Consórcio Troca de Bem"},
       {value: "25166399", text: "Consórcio Recebimento de Crédito"},
-      {value: "PUC", text: "URA PUC"},
-      {value: "CRD", text: "CRD"}
+      {value: "29221348", text: "CRD"},
+      {value: "PUC", text: "URA PUC"}
+//      {value: "CRD", text: "CRD"}
     ],
     "25166399": [
       {value: "PUC", text: "URA PUC"}
