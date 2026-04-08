@@ -46,6 +46,7 @@ const skillConfig = {
 //      {value: "PUC", text: "URA PUC"},
 //      {value: "SIPAG", text: "URA SIPAG"},
 //      {value: "CARTOES", text: "URA CARTOES"},
+        {value: "29221348", text: "CRD"},
         {value: "29221351", text: "Previ Retencao"},
         {value: "PUC", text: "URA PUC"}
     ],
