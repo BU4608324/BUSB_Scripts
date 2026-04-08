@@ -59,6 +59,7 @@ const skillConfig = {
       {value: "31507626", text: "SUPER LUCIANA SOARES LIMA"},
       {value: "31507627", text: "SUPER JOAO MARTINS B. NETO"},
       {value: "31507628", text: "SUPER CAROLYNA M. S. PRUDES"},
+      {value: "29221348", text: "CRD"},
       {value: "PUC", text: "URA PUC"}
     ],
     "25166399": [
