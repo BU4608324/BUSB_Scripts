@@ -125,6 +125,7 @@ const skillConfig = {
 //      {value: "CARTOES", text: "URA CARTOES"},
       {value: "29269582", text: "Card_Sicoob_BNDES"},
       {value: "29269553", text: "Card_Sicoob_Retencao"},
+      {value: "29221348", text: "CRD"},
       {value: "CARTOES", text: "URA CARTOES"},
       {value: "PUC", text: "URA PUC"}
     ],
