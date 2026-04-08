@@ -44,6 +44,7 @@ const skillConfig = {
   transferOptions: {
     default: [
         {value: "35629618", text: "35629618 - HOME_BROKER_CONTINGENCIA"},
+        {value: "29221348", text: "CRD"},
         {value: "PUC", text: "URA PUC"},
         {value: "SIPAG", text: "URA SIPAG"},
         { value: "CARTOES", text: "URA CARTOES" },
