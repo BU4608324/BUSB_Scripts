@@ -47,6 +47,7 @@ const skillConfig = {
 //      {value: "SIPAG", text: "URA SIPAG"},
 //      {value: "CARTOES", text: "URA CARTOES"},
         {value: "29220975", text: "Credito Funchal"},
+        {value: "29221348", text: "CRD"},
         {value: "PUC", text: "URA PUC"}
     ],
     "25166399": [
