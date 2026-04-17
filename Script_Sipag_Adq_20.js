@@ -46,6 +46,7 @@ const skillConfig = {
         {value: "23120871", text: "23120871 - 1.Sipag 1.0 - Atendente"},
         {value: "23120886", text: "23120886 - 1.Sipag 2.0 - SupTecnico"},
         {value: "23121572", text: "23121572 - 1.Sipag 2.0 - Retencao"},
+        {value: "29221348", text: "29221348 - CRD"},
         {value: "PUC", text: "URA PUC"},
         {value: "SIPAG", text: "URA SIPAG"},
         {value: "COOPERATIVAS", text: "URA COOPERATIVAS"}  
