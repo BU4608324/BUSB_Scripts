@@ -46,6 +46,7 @@ const skillConfig = {
 //      {value: "25166174", text: "25166174 - TER Coopera"},
 //      {value: "PUC", text: "URA PUC"},
 //      {value: "COOPERA", text: "URA COOPERA"}
+        { value: "20868803", text: "20868803 - Adq_Cabal_SupTecnico" },
         { value: "20868798", text: "20868798 - Adq Cabal Credenciamento" },
         { value: "20868802", text: "20868802 - Adq Cabal Retencao" },
         { value: "LOGISTA_CABAL", text: "URA LOJISTA CABAL" },
